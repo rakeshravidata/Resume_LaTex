@@ -1,0 +1,206 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,cambria]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[left=0.25in,right=0.25in,top=0.1in,bottom=0.1in]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+%\usepackage{import}
+\usepackage{enumitem}
+\usepackage{url}
+
+% \hypersetup{linkcolor=blue}
+% \renewcommand{\baselinestretch}{0.5}
+
+% personal data
+\renewcommand*{\namefont}{\fontsize{19}{21}\mdseries\upshape}
+\renewcommand*{\titlefont}{\fontsize{19}{21}\mdseries\upshape}
+\name{Rakesh Ravi}{K U}\fontsize{24}{26}
+ \title{Data Scientist}                               % optional, remove / comment the line if not wanted
+\phone[mobile]{+1 434 (409) 0672}                   % optional, remove / comment the line if not wanted
+% \phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
+% \phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{rk9cx@virginia.edu}                               % optional, remove / comment the line if not wanted
+%\homepage{https://rakeshravi1992.wixsite.com/website/}
+\social[linkedin][linkedin.com/in/rakesh-ravi-data Profile URL]{rakesh-ravi}
+\social[github][https://github.com/rakeshravidata]{rakesh-ravi-data}
+\social[Blog][https://medium.com/@rakeshravi_14055]{Medium.com-profile}
+
+% optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+%\photo[62pt][0.2pt]{picture}                       % optional, remove / comment the line if not wanted; '62pt' is the height the picture must be resized to, 0.2pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+\vspace{-40pt}
+
+% \vspace{12pt}
+
+\renewcommand\UrlFont{\color{blue}\rmfamily}
+% {\textbf{Homepage:} \url{www.cse.iitb.ac.in/\textasciitilde utkarshk}}
+
+\section{Education}
+
+\begin{itemize}[leftmargin=0.0in]
+\setlength\itemsep{.2em}
+\cventry{}{}{Master of Science in Data Science}{\textmd{2018 - Present}}{}{ \setlength{\itemindent}{.2in} \setlength\itemsep{.3em}
+\vspace{-15pt}
+\item[] University of Virginia, Charlottesville
+}
+\vspace{-3pt}
+\cventry{}{}{Bachelor of Technology, Mechanical Engineering}{\textmd{2010 - 2014}}{}{ \setlength{\itemindent}{.2in} \setlength\itemsep{.3em}
+\vspace{-15pt}
+\item[] SRM University, Chennai, India
+}
+\end{itemize}
+
+\vspace{-20pt}
+\section{Work Experience}
+
+\begin{itemize}[leftmargin=0.0in]
+\setlength\itemsep{.2em}
+\vspace{-1pt}
+\cventry{}{}{Research Assistant - Data Science, University of Virginia}{\textmd{Jul 2018 - Present}}{}{ \setlength{\itemindent}{.2in} \setlength\itemsep{.3em}
+\vspace{-10pt}
+\vspace{-1pt}
+\item Performed topic modeling and event identification using social media data for one of the top baseball leagues
+}
+
+\cventry{}{}{Senior Data Analyst, Media IQ, Bangalore}{\textmd{Jul 2017 - Jun 2018}}{}{ \setlength{\itemindent}{.2in} \setlength\itemsep{.3em}
+\vspace{-10pt}
+\vspace{-1pt}
+\item Devised campaign strategy, built reporting capabilities and handled business reviews through data analysis.
+\vspace{-1pt}
+\item Published a \textbf{dashboard on Tableau} for an e-commerce advertiser which displayed results based on market basket analysis of website data. This was (\textbf{utilized by the advertiser for effective cross-selling} in Europe) utilized by the advertiser for effective cross-selling.
+\vspace{-1pt}
+\item Deployed a \textbf{Random Forest} model on user engagement data for an advertiser which doubled the conversion rate of their campaign and resulted in 100\% increase in advertising budget.
+}
+
+\cventry{}{}{Business Analyst - Global Performance Delivery, InMobi, Bangalore}{\textmd{May 2015 - Jun 2017}}{}{ \setlength{\itemindent}{.2in}
+\setlength\itemsep{.3em}
+\vspace{-1pt}
+\vspace{-10pt}
+\item End to end ownership of delivery of campaign analytics from agency advertisers within Europe in terms of revenue and relationship. (\textbf{Over 30 of InMobi's revenue} in Europe).
+\vspace{-1pt}
+\item Built and managed large data sets to define network benchmarks for engagement rates across regions which helped clients assess their ad performance.
+\vspace{-1pt}
+\item Automated the delivery of daily revenue stats by collating data that was extracted from three orthogonal reporting APIs. These stats were utilized by the entire global team for monitoring their campaigns.
+}
+
+\cventry{}{}{Freelance Data Analyst, Canada Financial, Vancouver}{\textmd{May 2015 - Jun 2017}}{}{ \setlength{\itemindent}{.2in} \setlength\itemsep{.3em}
+\vspace{-10pt}
+\vspace{-1pt}
+\item Automated Canada Financial's internal report aggregation systems by conceptualizing a standardized reporting template for all their partners.
+\vspace{-1pt}
+\item Built a comprehensive \textbf{dashboard to provide an overview of KPIs} for their business functions and a detailed analysis of margins for different levels of the organization. 
+}
+
+
+
+\end{itemize}
+
+\section{Data Science Projects}
+
+
+
+\begin{itemize}[leftmargin=.2in]
+\setlength\itemsep{.2em}
+
+\item \textbf{Characterization of cyber-criminal activity at UVa:} Building a deep learning model to detect malicious cyber activity based on data collected from honeypots on the UVa network. The goal of the project is to build anomaly-based intrusion detection system detect malicious cyber activity
+\vspace{-1pt}
+
+\item \textbf{Hotel Recommendation System - Booking.com:} Built a recommendation engine in Python using k-means clustering algorithm on data scraped from booking.com. The recommendation engine was powered with user satisfaction scores from sentiment analysis performed on user reviews.
+\vspace{-1pt}
+
+\item \textbf{Flight Delay Prediction - FAA Data:} Built a machine learning model that was able to predict flight delay on FAA flight logs for the year of 2015. The model's area under curve in the ROC curve was 0.65.
+\vspace{-1pt}
+
+ \end{itemize}
+
+\section{Significant Achievements}
+
+\begin{itemize}[leftmargin=.2in]
+\setlength\itemsep{.2em}
+
+\item Data Science Student Council - University of Virginia (2018 - 2019)
+\vspace{-5pt}
+\item College Tennis Experience- 
+University of Virginia (2018 - 2019),
+SRM University (2010 - 2014)
+\vspace{-5pt}
+\item Nationally ranked Tennis player (2005 - 2010) and certified Tennis coach (2016 - Present)
+
+
+\end{itemize}
+
+\section{Data Science Skills}
+
+\begin{itemize}[leftmargin=.2in]
+\setlength\itemsep{.2em}
+
+\item \textbf{Database}  - MySQL, HiveQL, AWS
+\vspace{-5pt}
+\item \textbf{Data Analysis} - R, Python
+\vspace{-5pt}
+\item \textbf{Data Visualization}: Tableau, R-Shiny
+\vspace{-5pt}
+\item Fastai by Jeremey Howard and Deep Learning Specialization by Andrew NG 
+\end{itemize}
+
+
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+%-----       letter       ---------------------------------------------------------
+
+\end{document}
+
+
+%% end of file `template.tex'.
