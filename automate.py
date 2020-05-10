@@ -44,7 +44,10 @@ df.to_csv(output_csv_path, index = None)
 
 ### Append to Master
 master_csv_path = ""
-master_df = pd.read_csv(master_csv_path)
+if os.path.exists(master_csv_path):
+    master_df = pd.read_csv(master_csv_path)
+else:
+    master_df = pd.DataFrame()
 df = df.loc[:, ~df.columns.str.contains('^Unnamed')]
 master_df = pd.concat([master_df,df], axis =1)
 master_df.to_csv(master_csv_path, index = None)
