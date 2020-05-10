@@ -36,6 +36,7 @@ output_root_path = "
 today = str(datetime.datetime.today().strftime('%d-%m-%Y'))
 output_folder_name =  today
 output_folder_path = os.path.join(output_root_path, output_folder_name)
+if not os.path.exists(output_folder_path):os.makedirs(output_folder_path)
 output_csv_name = "confirmed_trade_{}".format(today)
 output_csv_path = os.path.join(output_folder_path, output_csv_name)
 df.to_csv(output_csv_path, index = None)
