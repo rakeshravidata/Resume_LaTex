@@ -12,7 +12,6 @@ def is_file_within_threshold(file_path, threshold):
 ### ITERATE AND GRAB ALL CSV PATHs THAT FIT THE THRESHOLD CONDITION
 confirmed_trade_path = ""
 threshold = 24
-output_csv_path = ""
 latest_csv_path = []
 for folder_name in os.listdir(confirmed_trade_path):
     ### ITERATE OVER ALL FOLDERS 
@@ -32,4 +31,20 @@ for csv_path in latest_csv_path:
     df_sub["date_processed"] = today
     df = df.append(df_sub)
     
+### CREATE FOLDER 
+output_root_path = "
+today = str(datetime.datetime.today().strftime('%d-%m-%Y'))
+output_folder_name =  today
+output_folder_path = os.path.join(output_root_path, output_folder_name)
+output_csv_name = "confirmed_trade_{}".format(today)
+output_csv_path = os.path.join(output_folder_path, output_csv_name)
 df.to_csv(output_csv_path, index = None)
+
+### Append to Master
+master_csv_path = ""
+master_df = pd.read_csv(master_csv_path)
+master_df = pd.concat([master_df,df], axis =1)
+master_df.to_csv("master_csv_path", index = None)
+
+
+
