@@ -37,15 +37,19 @@ today = str(datetime.datetime.today().strftime('%d-%m-%Y'))
 output_folder_name =  today
 output_folder_path = os.path.join(output_root_path, output_folder_name)
 if not os.path.exists(output_folder_path):os.makedirs(output_folder_path)
-output_csv_name = "confirmed_trade_{}".format(today)
+output_csv_name = "confirmed_trade_{}.csv".format(today)
 output_csv_path = os.path.join(output_folder_path, output_csv_name)
+df = df.loc[:, ~df.columns.str.contains('^Unnamed')]
 df.to_csv(output_csv_path, index = None)
 
 ### Append to Master
 master_csv_path = ""
 master_df = pd.read_csv(master_csv_path)
+df = df.loc[:, ~df.columns.str.contains('^Unnamed')]
 master_df = pd.concat([master_df,df], axis =1)
-master_df.to_csv("master_csv_path", index = None)
+master_df.to_csv(master_csv_path, index = None)
 
+
+df = df.loc[:, ~df.columns.str.contains('^Unnamed')]
 
 
